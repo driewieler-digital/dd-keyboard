@@ -1,0 +1,25 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="com.driewielerdigital.cordova.plugin.DDKeyboard" version="0.2.3">
+        <name>DDKeyboard</name>
+        <description>Driewieler Digital Keyboard Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova,dd_keyboard</keywords>
+        <js-module src="www/dd_keyboard.js" name="dd_keyboard">
+            <clobbers target="dd_keyboard" />
+        </js-module>
+        
+		<platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DDKeyboard">
+                <param name="android-package" value="com.driewielerdigital.cordova.plugin.DDKeyboard"/>                               
+            </feature>
+        </config-file>
+    
+		  <source-file src="src/android/com/driewielerdigital/cordova/plugin/DDKeyboard.java" target-dir="src/com/driewielerdigital/cordova/plugin" />  
+		  <source-file src="src/android/com/driewielerdigital/cordova/plugin/DDLayoutChangeListener.java" target-dir="src/com/driewielerdigital/cordova/plugin" />  
+    
+		</platform>    
+
+		
+    </plugin>
